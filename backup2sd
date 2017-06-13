@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Unesi zadnji broj lokalne IP adrese servera da bi pokrenuo backup podataka
+
+#HOSTIP=$1
+clear
+echo "Pokrećem rsync na glavne foldere podataka"
+echo "Sinhronizujem Documents folder..."
+rsync -avz --delete /home/vlajko/Documents /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Calibre folder..."
+rsync -avz --delete /home/vlajko/Calibre\ Library /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Music folder..."
+rsync -avz --delete /home/vlajko/Music /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Pictures folder..."
+rsync -avz --delete /home/vlajko/Pictures /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Videos folder..."
+rsync -avz --delete /home/vlajko/Videos /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Thunderbird folder..."
+rsync -avz --delete /home/vlajko/.thunderbird/ /media/vlajko/A31C-4235/Backup/Thunderbird
+echo "Sinhronizujem Dropbox folder..."
+rsync -avz --delete /home/vlajko/Dropbox /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Linux Programi folder..."
+rsync -avz --delete /home/vlajko/Linux\ Programi /media/vlajko/A31C-4235/Backup/
+echo "Sinhronizujem Skripte folder..."
+rsync -avz --delete /home/vlajko/Skripte /media/vlajko/A31C-4235/Backup/
+
+echo "-----------------------------------"
+echo " - Svi folderi su sinhronizovani! -"
+echo "-----------------------------------"
